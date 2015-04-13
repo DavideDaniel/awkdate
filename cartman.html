@@ -1,0 +1,114 @@
+<html>
+<body>
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <script>
+  	function draw() {
+	  var canvas = document.getElementById('canvas');
+	  if (canvas.getContext){
+		    var ctx = canvas.getContext('2d');
+
+		    var x = 195;
+var y = 218;
+
+var speed = 1;
+var speedx = 1;
+var draw= function() {
+
+//background
+background(194, 177, 230);
+//floor
+noStroke();
+fill(72, 62, 150);
+rect(-4, 239, 432, 175);
+//legs
+fill(84, 47, 47);
+quad(125,226,144,281,264,284,274,243);
+fill(250, 250, 250);
+
+//body
+noFill();
+fill(255, 0, 0);
+ellipse (203,201,206,131);
+noStroke();
+
+//head
+fill(31, 219, 203);
+ellipse (201,129,157,133);
+fill(242, 242, 8);
+
+//beanie
+
+ ellipse (184,66,16,9);
+ ellipse (194,65,18,12);
+ ellipse (203,65,18,12);
+ ellipse (210,66,16,9);
+ arc(199,138,166,77,208,346);
+ fill(240, 220, 122);
+ 
+ arc(198,142,168,76,208,346);
+  fill(240, 220, 122);
+ arc(200,132,157,135,-2,186);
+ 
+//eyes
+
+fill(245, 240, 240);
+
+noStroke();
+ellipse (185,132,25,34);
+ellipse (189,126,26,30);
+
+ellipse (223,135,25,34);
+ellipse (221,129,26,30);
+
+// eyeballs
+fill (20, 16, 16);
+ellipse (x,133,4,3);
+ellipse (y,133,4,3);
+
+//moving the eyeballs
+
+if (x>193){
+    speed = -1;
+}
+if (x<190) {
+    speed = 1;
+}
+x = x+ speed;
+
+if (y>218){
+    speedx = -1;
+}
+if (y<215){
+    speedx = 1; 
+}
+y = y + speedx;
+
+
+//mouth
+stroke(1);
+line(215, 168, 189, 163);
+
+//shoes
+ellipse (237,287,72,9);
+ellipse (166,286,72,9);
+
+//hands
+fill(240, 220, 122);
+ellipse (297,204,31,28);
+ellipse (106,203,31,28);
+
+//buttons
+line(203, 202, 202, 265);
+fill(31, 29, 29);
+ellipse (193,217,4,3);
+ellipse (193,235,4,3);
+ellipse (193,255,4,3);
+};		}
+
+
+	}
+	draw();
+  </script>
+</body>
+</html>
+

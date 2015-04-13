@@ -1,0 +1,23 @@
+<html>
+<body>
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+
+  <script>
+
+  var input = prompt("How many squares would you like?");
+  var z = parseInt(input);
+  var i = 0;
+
+    while ( i <= z) {
+      var canvas = document.getElementById('the_canvas');
+      var ctx = canvas.getContext('2d');
+      var x = Math.floor(Math.random()*(400-1) +1);
+      var y = Math.floor(Math.random()*(400-1) +1);
+      ctx.fillStyle = "red";
+      ctx.fillRect (x, y, 50, 50);
+      i++;
+    }
+
+  </script>
+</body>
+</html>

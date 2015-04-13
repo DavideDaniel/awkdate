@@ -1,0 +1,24 @@
+<html>
+<body> 
+  <canvas id="the_canvas" width="400" height="400"></canvas>
+  <script>
+    var cprompt = prompt("How many boxes?");
+    var boxnum = parseInt(cprompt);
+    var bn = 0;
+    
+        while (bn <= boxnum) {
+            var canvas = document.getElementById('the_canvas');
+            var ctx = canvas.getContext('2d');
+            var x = Math.floor(Math.random()*(400 - 0) + 1);
+            var y = Math.floor(Math.random()*(400 - 0) + 1);
+    
+    
+                ctx fillStyle = "red";
+                ctx fillRect (x, y, 20, 20);
+                bn++;
+
+        }
+
+  </script>
+</body>
+</html>
